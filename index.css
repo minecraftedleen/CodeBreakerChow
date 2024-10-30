@@ -1,0 +1,29 @@
+h1 {
+    color:black;
+
+}
+
+body {
+    background-color:lightgray;
+    text-align: center;
+}
+
+.vault{
+
+}
+
+.clock{
+
+}
+
+button{
+    border: 1px solid #211717;
+    margin-left: auto;
+    width:100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color:gray;
+    color:white;
+    font-style:bold;
+    size:30px
+}
