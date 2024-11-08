@@ -3,14 +3,17 @@
 <head>
     <title>Code Breaker by Edmund</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
     <h1>Code Breaker</h1>
-    <h1 class ="clock">Clock</h1>
+    <h1 class="clock" id="clock">Clock: 7</h1>
     <h1 class="vault">Vault</h1>
-    <button onclick="addDigit()">1</button>
-    <button onclick="addDigit()">2</button>
-    <button onclick="addDigit()">3</button>
+    <h1 id="message">Crack the code!</h1>
+    <h1 id="number"></h1>
+    <button id="b1" onclick="addOne()">1</button>
+    <button id="b2" onclick="addTwo()">2</button>
+    <button id="b3" onclick="addThree()">3</button>
 </body>
 </html>
