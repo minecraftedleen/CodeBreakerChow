@@ -1,11 +1,10 @@
 var codeInput = "";
 var code = "";
 var time = 7;
+var attempts = 0;
 var win = false;
 
-function addHighScore() {
-    
-}
+
 
 function addOne() {
     codeInput += "1";
@@ -33,6 +32,7 @@ function generateCode() {
 function clearGame() {
     codeInput = "";
     time = 7;
+    attempts = 0;
     document.getElementById("number").innerText = codeInput;
     document.getElementById("clock").innerText = "Clock: " + time;
     document.getElementById("message").setAttribute("style", "color:black");
@@ -55,6 +55,7 @@ function checkIt() {
         }
         codeInput = "";
         time -= 1;
+        attempts += 1; 
         randomChance();
         document.getElementById("clock").innerText = "Clock: " + time;
     } 
@@ -73,6 +74,18 @@ function checkIt() {
         document.getElementById("b3").disabled = true;
         document.getElementById("message").innerText = "You've cracked the code! \n Press Clear to restart"
         document.getElementById("message").setAttribute("style", "color:darkgreen");
+        alert(attempts);
+        if (localStorage.leastAttempts) {
+            if (+localStorage.getItem(leastAttempts) > attempts) {
+                localStorage.setItem("leastAttempts", attempts)
+            }
+            
+        } else {
+            localStorage.setItem("leastAttempts", attempts)
+        }
+
+       
+        document.getElementById("leastattempts").innerText = "Least attempts: " + localStorage.getItem("leastAttempts")
     }
 }
 
